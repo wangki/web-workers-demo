@@ -19,7 +19,7 @@
         canvas.height = img.height;
         ctx.drawImage(img,0,0);
         original = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      }
+      };
       img.src = event.target.result;
     }
     reader.readAsDataURL(e.target.files[0]);
@@ -67,10 +67,6 @@
       throw new WorkerException("error")
     };
 
-
-
-
-    toggleButtonsAbledness();
     return ctx.putImageData(imageData, 0, 0);
   };
 
